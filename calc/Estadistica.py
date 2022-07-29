@@ -33,7 +33,7 @@ class Estadistica:
             dolares.append(suma)
 
         plt.figure(figsize=(10,5))
-        plt.bar(distritos, dolares, color="cyan")
+        plt.bar(distritos, dolares, color="DarkCyan")
         plt.title('Importación en dolares por distrito')
         plt.xticks(rotation=10)
         plt.ylabel('dolares (M)')
@@ -51,7 +51,7 @@ class Estadistica:
 
         x = self.df['DISTRITO']
         plt.figure(figsize=(10,5))
-        plt.hist(x, bins=None, color="cyan")
+        plt.hist(x, bins=None, color="DarkCyan")
         plt.title('Frecuencia de importaciones por distrito')
         plt.xticks(rotation=10)
         plt.ylabel('frecuencia')
@@ -78,7 +78,7 @@ class Estadistica:
         paises = [i[0] for i in lista[0:11]]
         importaciones = [i[1] for i in lista[0:11]]
         plt.figure(figsize=(10,5))
-        plt.bar(paises, importaciones, color="cyan")
+        plt.bar(paises, importaciones, color="DarkCyan")
         plt.ylabel('Importaciones')
         plt.title('Top 10 paises con más importaciones')
         plt.xticks(rotation=15)
