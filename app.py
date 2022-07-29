@@ -35,6 +35,10 @@ def proyectoDatos():
     return render_template('proyectoDatos.html',
         data=est.datosExcel())
 
+@app.route('/manual')
+def manual():
+    return render_template('manual.html')
+
 @app.route('/proyectoAnalisis')
 def proyectoAnalisis():
     return render_template('proyectoAnalisis.html',
