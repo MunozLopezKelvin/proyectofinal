@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %} Montecarlo {% endblock %}
+{% block content %}
+<center>
+    <br>
+    <h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        <strong>Resultados</strong>
+    </h2>
+    <br>
+</center>
+<h3>Datos generados</h3>
+<br>
+<div class="card border-info mb-3">
+    {{data|safe}}
+</div>
+<div class="container col-md-6 mb-3">
+    <p class="">El total de ventas es <strong>{{data3|safe}}</strong> </p>
+
+</div>
+<h3>Simulacion</h3>
+<br>
+<div class="card cards">
+    <div class="card border-info mb-3">
+    {{data|safe}}
+</div>
+</div>
+<br>
+<h3>Grafica</h3>
+<br>
+<div class="card my-3 border-info  w-100">
+    <div class="row g-0">
+        <div class="col-md-8">
+            <img src="data:image/png;base64,{{image}}" class="img-fluid rounded-start" alt="grafica">
+        </div>
+        <div class="col-md-4">
+            <div class="card-body">
+                <center>
+                    <br><br><br><br>
+                    <h5 class="card-title"><strong>Grafica de los numeros aleatorios con cuadrados Medios</strong></h5>
+                </center>
+                <p class="card-text" align="justify">En etsa grafica se muestra los numeros aleatorios generados
+                    segun los datos obtneidos anteriormente </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

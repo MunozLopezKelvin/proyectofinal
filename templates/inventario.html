@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %} inventario {% endblock %}
+{% block content %}
+<h2 class="my-4 text-center">Resultados</h2>
+<h3>Datos generados</h3>
+<table class="table table-striped">
+    <thead>
+        {% for i in df.columns %}
+        <th>{{ i }}</th>
+        {% endfor %}
+    </thead>
+    <tbody>
+        {% for i in df.iterrows() %}
+        <tr>
+            <td>{{ i[1][0] }}</td>
+            <td>{{ i[1][1] }}</td>
+            <td>{{ i[1][2] }}</td>
+            <td>{{ i[1][3] }}</td>
+            <td>{{ i[1][4] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<div class="card my-3 w-100">
+    <div class="row g-0">
+        <div class="col-md-8">
+        <img src="data:image/png;base64,{{imagen}}" class="img-fluid rounded-start" alt="grafica">
+        </div>
+        <div class="col-md-4">
+        <div class="card-body">
+            <p class="card-text">Cantidad Optima de Pedito Q = {{datos['Q']}}</p>
+            <p class="card-text">Costo total de Ordenar CoT = {{datos['CoT']}}</p>
+            <p class="card-text">Costo total de Mantener Inventario ChT = {{datos['ChT']}}</p>
+            <p class="card-text">Costo Total de Ordenar y Mantener Inventario MO(O) = {{datos['MOQ']}}</p>
+            <p class="card-text">Costo Total del Sistema de Inventario CTT = {{datos['CTT']}}</p>
+            <p class="card-text">Número total de pedidos = {{datos['N']}}</p>
+            <p class="card-text">Punto de reorden = R {{datos['R']}}</p>
+            <p class="card-text">Tiempo de Pedido = {{datos['T']}}</p>
+        </div>
+        </div>
+    </div>
+</div>
+    
+{% endblock %}

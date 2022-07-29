@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block title %} Análisis {% endblock %}
+{% block content %}
+<center>
+  <br>
+  <h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><strong>Analisis</strong>
+  </h2>
+  <br><br>
+</center>
+<div class="card my-3 w-100">
+  <div class="row g-0">
+    <div class="col-md-8">
+      <img src="data:image/png;base64,{{imagen1}}" class="img-fluid rounded-start" alt="grafica">
+    </div>
+    <div class="col-md-4">
+      <div class="card-body">
+        <center>
+          <br><br><br>
+          <h5 class="card-title"><strong>Importaciones por Distrito</strong></h5>
+        </center>
+        <p class="card-text" align="justify">En el análisis realizado de la agrupación de importaciones podemos observar
+          que en el Distrito de Guayaquil Marítimo los ingresos de las importaciones que se realizan en dicho lugar son
+          la mayor fuente de ingresos en dólares.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card my-3 w-100">
+  <div class="row g-0">
+    <div class="col-md-8">
+      <img src="data:image/png;base64,{{imagen2}}" class="img-fluid rounded-start" alt="grafica">
+    </div>
+    <div class="col-md-4">
+      <div class="card-body">
+        <center>
+          <br><br><br>
+          <h5 class="card-title"><strong>Frecuencia de Importaciones por Distrito</strong></h5>
+        </center>
+        <p class="card-text" align="justify">Podemos ver que la mayor cantidad de importaciones tienen como destino el centro de Guayaquil Marítimo seguido de Quito con una gran diferencia, pero aun así ocupando el segundo lugar.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card my-3 w-100">
+  <div class="row g-0">
+    <div class="col-md-8">
+      <img src="data:image/png;base64,{{imagen3}}" class="img-fluid rounded-start" alt="grafica">
+    </div>
+    <div class="col-md-4">
+      <div class="card-body">
+        <center>
+          <br><br><br><br>
+          <h5 class="card-title">Top 10 Paises con mas importaciones</h5>
+        </center>
+        <p class="card-text" align="justify">Entre los 10 paises que más se reciben importaciones lideran China y Estados Unidos.</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

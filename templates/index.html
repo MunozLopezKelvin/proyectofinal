@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %} Home {% endblock %}
+{% block content %}
+
+<center>
+    <br>
+    <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Importaciones de la Aduana
+        en el Ecuador</h1>
+    <hr>
+    <div class="card mb-3">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{ url_for('static', filename='importa.jpg') }}" style="width: 600px; height:400px">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="{{ url_for('static', filename='importa1.jpg') }}" style="width: 600px; height:400px">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <h3 class="card-title" style="font-size:20px;"><strong>Proyecto De Importacioness</strong></h3>
+            <p class="card-text" align="justify" style="font-size: 18px;">Este sistema está basado en las técnicas de modelamiento y simulación las cuales
+                permiten hacer una serie de procesos en base a los datos extraídos desde la Aduana del Ecuador
+                específicamente del mes de mayo del 2021. <br>
+                Este proyecto fue realizado por la estudiante VILLAMAR PILOSO
+                DAYANA LISSETH de la carrera de Ingeniera en Tecnología de la Información de la Universidad Laica
+                Eloy Alfaro de Manabí, gracias a los conocimientos adquiridos dentro de la materia Modelamiento y
+                Simulación impartida por el Ingeniero Jorge Moya Delgado </p>
+        </div>
+    </div>
+</center>
+
+
+
+{% endblock %}
